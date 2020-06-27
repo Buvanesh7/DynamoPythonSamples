@@ -50,14 +50,14 @@ try:
 
         mp = FilePath(path)
         
-        #Defie OPen options
+        #Define OPen options
         opt = OpenOptions()
         opt.DetachFromCentralOption = DetachFromCentralOption.DetachAndPreserveWorksets
         #Close all worksets
         worksetConfig = WorksetConfiguration(WorksetConfigurationOption.CloseAllWorksets)
         opt.SetOpenWorksetsConfiguration(worksetConfig)
         
-        #Openind Document
+        #Opening Document
         newDoc = app.OpenDocumentFile(mp, OpenOptions())
         
         collector = FilteredElementCollector(newDoc)
